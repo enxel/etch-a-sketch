@@ -15,7 +15,7 @@ function reestructure() {
 function hoverChange (e) {
     if (e.target.classList.contains("unhovered-element")) {
         e.target.classList.toggle("unhovered-element");
-        e.target.classList.toggle("hovered-element");
+        e.target.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`;
     }
 }
 

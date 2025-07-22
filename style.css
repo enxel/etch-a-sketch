@@ -16,10 +16,6 @@ body {
     background-color: aliceblue;
 }
 
-.hovered-element {
-    background-color: green;
-}
-
 button {
     color: white;
     background-color: blue;
