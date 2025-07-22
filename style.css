@@ -1,6 +1,9 @@
 body {
     background-color: black;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .container {
@@ -10,6 +13,8 @@ body {
 
 .grid-element {
     border: 1px solid black;
+    flex: auto;
+    box-sizing: border-box;
 }
 
 .unhovered-element {
