@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-element {
+    border: 1px solid black;
+}
+
+.unhovered-element {
+    background-color: aliceblue;
+}
+
+.hovered-element {
+    background-color: green;
+}
