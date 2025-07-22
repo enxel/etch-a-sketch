@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 let dim = 16;
 const border_width = 1;
+let darkening = 0;
 
 window.addEventListener("resize", reestructure);
 
@@ -25,6 +26,10 @@ function hoverChange (e) {
     if (e.target.classList.contains("unhovered-element")) {
         e.target.classList.toggle("unhovered-element");
         e.target.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`;
+        e.target.style.opacity = `${darkening}%`;
+        if (darkening < 100){
+            darkening += 10;
+        }
     }
 }
 
@@ -33,7 +38,8 @@ function resizer() {
 
     if (n !== dim) {
         dim = n;
-
+        darkening = 0;
+        
         const divs = Array.from(document.querySelectorAll(".grid-element"));
         divs.forEach(function (item) {item.remove()});
 
