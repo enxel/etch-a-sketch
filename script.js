@@ -13,8 +13,10 @@ function reestructure() {
 }
 
 function hoverChange (e) {
-    e.target.classList.toggle("unhovered-element");
-    e.target.classList.toggle("hovered-element");
+    if (e.target.classList.contains("unhovered-element")) {
+        e.target.classList.toggle("unhovered-element");
+        e.target.classList.toggle("hovered-element");
+    }
 }
 
 for (let i = 0; i < dim * dim; i++) {
